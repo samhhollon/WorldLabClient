@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #424242;
+  color: #ffffff;
+}
+.navPadding {
+  padding-left: 15px;
+  padding-right: 10px;
+}
