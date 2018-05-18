@@ -12,7 +12,7 @@ export default class Proposal extends Component {
         )
     }
 
-    _voteForProposal = async () => {
+    _voteOnProposal = async () => {
         //Add voteOnLink mutation
     }
 }

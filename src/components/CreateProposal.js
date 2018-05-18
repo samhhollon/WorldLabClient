@@ -31,7 +31,7 @@ class CreateProposal extends Component {
                   />
                 </div>
                 <div className="card-action">
-                  <button className="btn teal lighten-2" onClick={() => this._addProposal()}>Submit</button>
+                  <button className="btn" onClick={() => this._addProposal()}>Submit</button>
                 </div>
               </div>
             </div>
