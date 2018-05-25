@@ -42,13 +42,7 @@ const VOTE_ON_PROPOSAL_MUTATION = gql`
       proposal {
         votes {
           id
-          user {
-            id
-          }
         }
-      }
-      user {
-        id
       }
     }
   }
