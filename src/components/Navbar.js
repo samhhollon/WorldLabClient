@@ -18,13 +18,13 @@ class Navbar extends Component {
                         <Link to="/about">About</Link>
                     </li>
                     {authToken ? (
-                        <li
-                            onClick={() => {
-                            localStorage.removeItem(AUTH_TOKEN)
-                            this.props.history.push(`/`)
-                            }}
-                        >
-                            Log out
+                        <li>
+                            <Link
+                                to="/"
+                                onClick={() => {localStorage.removeItem(AUTH_TOKEN)}}
+                            >
+                                Log out
+                            </Link>
                         </li>
                     ) : (<li><Link to="/login">Log in</Link></li>)}
                 </ul>

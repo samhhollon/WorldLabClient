@@ -31,7 +31,7 @@ class CreateProposal extends Component {
                   />
                 </div>
                 <div className="card-action">
-                  <button className="btn" onClick={() => this._addProposal()}>Submit</button>
+                  <button className="btn" onClick={() => this._createProposal()}>Submit</button>
                 </div>
               </div>
             </div>
@@ -39,9 +39,9 @@ class CreateProposal extends Component {
     )
   }
 
-  _addProposal = async () => {
+  _createProposal = async () => {
     const { topic, content } = this.state
-    await this.props.addProposalMutation({
+    await this.props.createProposalMutation({
       variables: {
         topic,
         content
@@ -50,13 +50,13 @@ class CreateProposal extends Component {
   }
 }
 
-const ADDPROPOSAL_MUTATION = gql`
-  mutation AddProposalMutation($topic: String!, $content: String!) {
-    addProposal(topic: $topic, content: $content) {
+const CREATEPROPOSAL_MUTATION = gql`
+  mutation CreateProposalMutation($topic: String!, $content: String!) {
+    createProposal(topic: $topic, content: $content) {
       id
       topic
       content
     }
   }
 `
-export default graphql(ADDPROPOSAL_MUTATION, { name: 'addProposalMutation' })(CreateProposal)
+export default graphql(CREATEPROPOSAL_MUTATION, { name: 'createProposalMutation' })(CreateProposal)
