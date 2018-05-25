@@ -4,7 +4,22 @@ body {
   background-color: #424242;
   color: #ffffff;
 }
+
 .navPadding {
   padding-left: 15px;
   padding-right: 10px;
+}
+
+.upVote {
+  width: 24px;
+  height: 24px;
+  margin: 0px 10px 0px 5px;
+  padding: 0px;
+  border-radius: 50%;
+  font-size: 11px;
+}
+
+.upVoteText {
+  position: relative;
+  bottom: 6px;
 }

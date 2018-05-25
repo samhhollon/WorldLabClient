@@ -40,6 +40,16 @@ const PROPOSAL_QUERY = gql`
                 id
                 topic
                 content
+                user {
+                    id
+                    name
+                }
+                votes {
+                    id
+                    user {
+                        id
+                    }
+                }
             }
         }
     }
