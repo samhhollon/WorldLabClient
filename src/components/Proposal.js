@@ -10,17 +10,20 @@ class Proposal extends Component {
         const authToken = localStorage.getItem(AUTH_TOKEN)
         return (
             <li>
-                <div className="card-text section">
-                    { authToken && (
-                        <span>
-                            <button className="btn upVote" onClick={() => this._voteOnProposal()}>
-                                <span className="upVoteText">{this.props.proposal.votes.length}</span>
-                            </button>
-                        </span>
-                    )}
-                    {this.props.proposal.topic} ({this.props.proposal.content})
+                <div className="row card-text section piecePadding">
+                    <span className="col s9">
+                        { authToken && (
+                            <span>
+                                <button className="btn upVote" onClick={() => this._voteOnProposal()}>
+                                    <span className="upVoteText">{this.props.proposal.votes.length}</span>
+                                </button>
+                            </span>
+                        )}
+                        {this.props.proposal.topic} ({this.props.proposal.content})
+                    </span>
+                    <span className="col s3 material-icons closeButton">close</span>
                 </div>
-                <div className="divider"/>
+                <div className="divider pieceDivider"/>
             </li>
         )
     }

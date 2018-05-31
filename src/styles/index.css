@@ -13,7 +13,9 @@ body {
 .upVote {
   width: 24px;
   height: 24px;
-  margin: 0px 10px 0px 5px;
+  position: relative;
+  right: 4px;
+  margin-right: 10px;
   padding: 0px;
   border-radius: 50%;
   font-size: 11px;
@@ -22,4 +24,22 @@ body {
 .upVoteText {
   position: relative;
   bottom: 6px;
+}
+
+.closeButton {
+  text-align: right;
+}
+
+.piecePadding {
+  padding: 5px;
+  margin: 5px;
+}
+
+.pieceDivider {
+  opacity: 0.25;
+}
+
+/* TEMPORARY */
+.tempList {
+  height: 1000px;
 }
